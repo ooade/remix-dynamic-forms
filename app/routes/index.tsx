@@ -113,6 +113,12 @@ export default function Index() {
 
 			<section>
 				<h2> Submission </h2>
+				{!actionData?.submission ? (
+					<div>
+						<br />
+						<p>No submission :)</p>
+					</div>
+				) : null}
 				{Object.keys(actionData?.submission || {}).map((submissionKey) => (
 					<div key={submissionKey}>{actionData?.submission[submissionKey]}</div>
 				))}
